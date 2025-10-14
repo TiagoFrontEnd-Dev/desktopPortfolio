@@ -1,169 +1,102 @@
-/* Variáveis de Cores (Tema Dark) */
+/* =========================================================================
+   VARIÁVEIS DE CORES E TEMA
+   ========================================================================= */
 :root {
-  --bg-dark: hsl(0, 0%, 12%);
-  /* Fundo unificado: body, container e painéis */
-  --bg-card-element: #1a1a1a;
-  /* Cor para cards menores (projeto-card) */
-  --text-light: #fff;
-  --text-secondary: #a0a0a0;
-  --border-color: rgba(255, 255, 255, 0.1);
-
-  /* Cores do Gradiente */
-  --gradient-start: #7b2ff7;
-  /* Roxo */
-  --gradient-end: #f107a3;
-  /* Pink */
-  --highlight-gradient: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    --bg-dark: #1f1f1f; /* Fundo unificado: body, container, left e right panel */
+    --bg-card-element: #1a1a1a; /* Cor para cards menores */
+    --text-light: #fff;
+    --text-secondary: #a0a0a0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    /* Cores do Gradiente (Seus destaques) */
+    --gradient-start: #7b2ff7; /* Roxo */
+    --gradient-end: #f107a3; /* Pink */
+    --highlight-gradient: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
 }
+
+/* =========================================================================
+   ESTRUTURA PRINCIPAL (Ajuste de Altura Global)
+   ========================================================================= */
+body {
+    background-color: var(--bg-dark); 
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+
+
 
 body {
-  /* 1. Fundo do BODY unificado com os painéis */
-  background-color: #212529;
-  color: var(--text-light);
-  font-family: 'Poppins', sans-serif;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
-
-/* 1. Centralização do Container e Borda arredondada */
-.max-width-custom {
-  max-width: 1400px;
+.container {
+    max-width: 500px;
+    height: fit-content;
+    background-color:  hsl(0, 0%, 12%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
 }
-
-.main-content {
-  /* Fundo do container principal setado para a cor base */
-  background-color: var(--bg-dark);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  min-height: 90vh;
-  overflow: hidden;
+.user {
+    margin-bottom: 25px;
 }
-
-/* Lado Esquerdo */
-.lado-esquerdo-container {
-  /* 2. Lado esquerdo com cor sólida (igual ao body e lado direito) */
-  background-color: rgba(255, 255, 255, 0.05);
-  border-right: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
+.user img {
+    border-radius: 50%;
 }
-
-/* Círculo do Perfil */
-.perfil-circulo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: #333;
-  border: 3px solid var(--gradient-start);
+.user-description h3{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+    font-size: 18px;
 }
-
-/* 2. Área de Cards com Scroll Vertical (Limitado a 2 Cards) */
-.cards-scroll-vertical-container {
-  max-height: 380px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex-grow: 1;
-  padding: 10px;
+.user-description p {
+    color: hsl(75, 94%, 57%);
+    font-size: 11px;
+    font-weight: 600;
 }
-
-/* Estilo da barra de rolagem (mantido) */
-.cards-scroll-vertical-container::-webkit-scrollbar {
-  width: 8px;
+.job { 
+    color: hsl(0, 0%, 90%);
+    font-weight: 700;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
-
-.cards-scroll-vertical-container::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 10px;
+.social-mid {
+    padding: 0 12px;
+    margin-bottom: 25px;
 }
-
-.cards-scroll-vertical-container::-webkit-scrollbar-track {
-  background: #1e1e1e;
+.social-mid p{
+    width: 375px;
+    line-height: 3;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
 }
-
-
-/* Estilo do Card de Projeto (Ajustado para maior altura) */
-.projeto-card {
-  /* Cards menores agora usam uma cor um pouco diferente para se destacar */
-  background-color: var(--bg-card-element);
-  border: 1px solid var(--border-color);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 15px 0;
+.social-mid p a {
+    text-decoration: none;
+    color: white;
 }
-
-.projeto-card:hover,
-.projeto-card.ativo {
-  background-color: #252525;
-  border-color: var(--gradient-start);
-  box-shadow: 0 0 10px rgba(123, 47, 247, 0.5);
-}
-
-.card-image {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-  border: 1px solid var(--border-color);
-  flex-shrink: 0;
-}
-
-.projeto-card .card-body {
-  padding: 0 1.5rem;
-}
-
-/* Lado Direito (Detalhes do Projeto) */
-.lado-direito {
-  /* 3. Fundo do lado direito unificado */
-  background-color: #1f1f1f;
-  ;
-  position: sticky;
-  top: 0;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.detalhes-imagem {
-  height: 150px;
-  background-color: #333;
-  border: 1px solid var(--border-color);
-}
-
-/* Estilo para botões (Do seu main.css) */
-.btn-gradient {
-  background: var(--highlight-gradient);
-  border: none;
-  transition: 0.3s;
-}
-
-.btn-gradient:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-
-
-/* --- RESPONSIVIDADE (Mantida) --- */
-@media (max-width: 1280px) {
-  .max-width-custom {
-    max-width: 1000px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .lado-esquerdo-container {
-    border-right: none;
-  }
-
-  .cards-scroll-vertical-container {
-    max-height: 400px;
-  }
-
-  /* Lógica de ocultação do lado direito em mobile */
-  .lado-direito {
-    background-color: var(--bg-dark) !important;
-    /* Garante a cor de fundo no overlay mobile */
-    /* ... (mantém a lógica de ocultação/exibição) ... */
-  }
-}
-
-
-/* Responsividade 3: Mobile (640px e menor) */
-@media (max-width: 640px) {
-  /* ... (mantido) ... */
+.social-mid p:hover {
+    background-color: hsl(0, 0%, 8%);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }

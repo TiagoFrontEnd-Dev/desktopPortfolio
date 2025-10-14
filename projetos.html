@@ -1,125 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Dark (Wireframe Final)</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/projetos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- Links -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/projetos.css">
+  
+  <title> Tiago Oliveira | Contato </title>
+
 </head>
-<body class="dark-theme">
-
-    <div class="container my-5 max-width-custom">
-        <div class="row min-vh-100-custom shadow-lg rounded-3 main-content">
-
-            <div class="col-12 col-lg-8 lado-esquerdo-container p-4">
-                
-                <header class="text-center mb-4">
-                    <div class="perfil-circulo mx-auto mb-3"></div>
-                    <h2 class="text-white">Projetos Desenvolvidos</h2>
-                </header>
-
-                <div class="cards-scroll-vertical-container p-2">
-                    <div class="cards-wrapper-vertical d-grid gap-4"> 
-                        
-                        <div class="card projeto-card m-0" data-projeto="projeto-1">
-                            <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                                <div class="card-image me-md-3 mb-3 mb-md-0"></div>
-                                <div class="flex-grow-1 text-center text-md-start">
-                                    <h5 class="card-title">Título do Projeto 1</h5>
-                                    <p class="card-text small text-secondary">parágrafo sobre o projeto e descrição do mesmo.</p>
-                                </div>
-                                <button class="btn btn-outline-light btn-sm projeto-btn mt-3 mt-md-0">Projeto</button>
-                            </div>
-                        </div>
-
-                        <div class="card projeto-card m-0" data-projeto="projeto-2">
-                            <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                                <div class="card-image me-md-3 mb-3 mb-md-0"></div>
-                                <div class="flex-grow-1 text-center text-md-start">
-                                    <h5 class="card-title">Título do Projeto 2</h5>
-                                    <p class="card-text small text-secondary">descrição do projeto e detalhes.</p>
-                                </div>
-                                <button class="btn btn-outline-light btn-sm projeto-btn mt-3 mt-md-0">Projeto</button>
-                            </div>
-                        </div>
-
-                        <div class="card projeto-card m-0" data-projeto="projeto-3">
-                            <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                                <div class="card-image me-md-3 mb-3 mb-md-0"></div>
-                                <div class="flex-grow-1 text-center text-md-start">
-                                    <h5 class="card-title">Título do Projeto 3</h5>
-                                    <p class="card-text small text-secondary">Mais um projeto que exige a rolagem para ser visualizado.</p>
-                                </div>
-                                <button class="btn btn-outline-light btn-sm projeto-btn mt-3 mt-md-0">Projeto</button>
-                            </div>
-                        </div>
-
-                        <div class="card projeto-card m-0" data-projeto="projeto-4">
-                           <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                                <div class="card-image me-md-3 mb-3 mb-md-0"></div>
-                                <div class="flex-grow-1 text-center text-md-start">
-                                    <h5 class="card-title">Título do Projeto 4</h5>
-                                    <p class="card-text small text-secondary">Descrição completa do projeto 4.</p>
-                                </div>
-                                <button class="btn btn-outline-light btn-sm projeto-btn mt-3 mt-md-0">Projeto</button>
-                            </div>
-                        </div>
-
-                        <div class="card projeto-card m-0" data-projeto="projeto-5">
-                            <div class="card-body d-flex flex-column flex-md-row align-items-center">
-                                <div class="card-image me-md-3 mb-3 mb-md-0"></div>
-                                <div class="flex-grow-1 text-center text-md-start">
-                                    <h5 class="card-title">Título do Projeto 5</h5>
-                                    <p class="card-text small text-secondary">Último projeto da lista de 5 cards.</p>
-                                </div>
-                                <button class="btn btn-outline-light btn-sm projeto-btn mt-3 mt-md-0">Projeto</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-4 lado-direito p-4" id="detalhes-projeto">
-                
-                <div class="d-flex justify-content-end d-lg-none mb-3">
-                    <button class="btn btn-close btn-close-white" id="fechar-detalhes"></button>
-                </div>
-
-                <div class="detalhes-conteudo">
-                    <div class="detalhes-imagem mb-3"></div>
-                    
-                    <h3 class="text-white titulo-projeto-detalhe">Título do projeto</h3>
-                    <p class="text-secondary lorem-ipsum">
-                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos.
-                    </p>
-                    
-                    <p class="text-light mt-4">**Linguagens:**</p>
-                    <p class="text-info linguagens-projeto">html css js bootstrap</p>
-                    
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
-                        <a href="#" class="btn btn-outline-light me-md-2" target="_blank">
-                             <i class="bi bi-github"></i> Github
-                        </a>
-                        <a href="#" class="btn btn-success" target="_blank">
-                             <i class="bi bi-globe"></i> Projeto Online
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="mensagem-selecao text-center text-secondary py-5 d-none">
-                     <i class="bi bi-cursor" style="font-size: 2rem;"></i>
-                    <p class="mt-2">Selecione um projeto para ver os detalhes.</p>
-                </div>
-
-            </div>
-
-        </div>
+<body> 
+  <main class="container">
+    <div class="user">
+      <img src="./assets/img/black_el.jpeg" alt="Profile Tiago Oliveira" width="250" height="250">
     </div>
+    <!-- user -->
+    <div class="user-description">
+      <h3>Tiago Oliveira</h3>
+      <p>Minas Gerais, Brasil</p>
+    </div>
+    <!-- user-description -->
+      <p class="job">"It is not the programming language that defines the programmer, but rather his logic.."</p>
+    <div class="social-mid">
+      <p><a href="https://github.com/TiagoFrontEnd-Dev?tab=repositories" target="_blank">GitHub</a> </p>
+      <p><a href="https://wa.me/5531995983128" target="_blank">WhatsApp</a></p>
+      <p><a href="mailto:tiago.engsoft@outlook.com" target="_blank">Email</a></p>
+      <p><a href="https://www.instagram.com/_tgsx7/" target="_blank">Instagram</a> </p>
+    </div>
+    <!-- social-mid -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+  </main>
 </body>
 </html>
